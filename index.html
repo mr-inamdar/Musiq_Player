@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <header>
+            <img src="pics/logo.PNG" alt="" id="wlogo">
+            <h2 id="musiq">Musiq</h2>
+            <i class="bi bi-house-fill" id="home"></i>
+            <div class="search">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="search..." id="pc-search">
+                <div class="search_results">
+                    <!-- <div class="card" onclick="activate_song_popup('pics/kun_anta.jpg', 'Kun Anta كن أنت', 'songs/17.mp3', 'Humood AlKhudher')">
+                        <img src="pics/1.jpeg" alt="">
+                        <div class="content">
+                            Khayaal
+                            <div class="subtitel">Talwiinder</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <nav id="nav_bar">
+                <button id="close" onclick="close_nav_bar()">X</button>
+                <span>Premium</span>
+                <span>Support</span>
+                <span>Download</span>
+                <span id="bar">|</span>
+                <span id="app"><i class="bi bi-arrow-down-circle"></i> Install App</span>
+                <span>Sign In</span>
+                <button class="normal">Log In</button>
+            </nav>
+            <div id="list" onclick="disply_nav_bar()"><i class="bi bi-list"></i></div>
+        </header>
+        <div id="song">
+            <div id="playlist">
+                <h1>Playlist</h1>
+                <div id="playlist_1">
+                    <h4 class="active"><span></span><i class="bi bi-apple-music"></i> Playlist</h4>
+                    <h4><span></span><i class="bi bi-apple-music"></i> Last Listening</h4>
+                    <h4><span></span><i class="bi bi-apple-music"></i> Recommended</h4>
+                </div>
+                <div class="menu_song">
+                    <li class="song_item">
+                        <span>01</span>
+                        <img src="pics/rang.jpg" alt="">
+                        <h5>
+                            Rang Lo Lagyo
+                            <div class="subtitel">Atif Aslam & Shreya Ghoshal</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>02</span>
+                        <img src="pics/khayal.jpg" alt="">
+                        <h5>
+                            KHAYAAL
+                            <div class="subtitel">Talwiinder</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>03</span>
+                        <img src="pics/ahwarun.jpg" alt="">
+                        <h5>
+                            Ahwarun Ahwarun Islamic Arabic Song
+                            <div class="subtitel">Hadi Faaour</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>04</span>
+                        <img src="pics/a2.jpg" alt="">
+                        <h5>
+                            Aashiqui-2 Mashup
+                            <div class="subtitel">DJ Kiran Kamath</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>05</span>
+                        <img src="pics/gulabiAnkhem.jpg" alt="">
+                        <h5>
+                            Gulabi Aankhen
+                            <div class="subtitel">Sanam</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>06</span>
+                        <img src="pics/dagabaaz.jpg" alt="">
+                        <h5>
+                            Dagabaaz Re
+                            <div class="subtitel">Rahat Fateh Ali Khan & Shreya Gh</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>07</span>
+                        <img src="pics/dhun.jpg" alt="">
+                        <h5>
+                            Dhun (Saiyaara)
+                            <div class="subtitel">Arijit Singh & Mithoon</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>08</span>
+                        <img src="pics/kay.jpg" alt="">
+                        <h5>
+                            Kya - "Crook"
+                            <div class="subtitel">Pritam & Neeraj Shridhar</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>09</span>
+                        <img src="pics/beqarar.jpg" alt="">
+                        <h5>
+                            Beqarar Karke Hamen Yun Na Jaiye
+                            <div class="subtitel">Hemant Kumar</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                    </li>
+                    <li class="song_item">
+                        <span>10</span>
+                        <img src="pics/main_hoon_sath_tere.jpg" alt="">
+                        <h5>
+                            Main Hoon Saath Tere - "Shaadi Mein Zaroor Aana"
+                            <div class="subtitel">Arijit Singh</div>
+                        </h5>
+                        <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                    </li>
+                </div>
+            </div>
+            <div id="sudjesion">
+                <div id="treanding_song" class="section_p">
+                    <h1 class="heading">Treanding Song</h1>
+                    <div id="song_container" class="container">
+                        <div class="song song_box">
+                            <img src="pics/rang.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/rang.jpg', 'Rang Jo Lagyo-Ramaiya Vastavaiya रंग जो लाग्यो - रमैया वस्तावैया رنگ جو لگیو-رمائیا وسٹاویہ', 'songs/21.mp3', 'Atif Aslam & Shreya Ghoshal')"></i></button>
+                            <h2 class="song_name_style">Rang Lo Lagyo</h2>
+                            <span class="artist_name_style">Atif Aslam & Shreya Ghoshal</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/u.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/u.jpg', 'You यू یو', 'songs/25.mp3', 'THEMXXNLIGHT & Talwiinder')"></i></button>
+                            <h2 class="song_name_style">You</h2>
+                            <span class="artist_name_style">THEMXXNLIGHT & Talwiinder</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/phlidafa.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/phlidafa.jpg', 'Pehli Dafa پہلی دفعہ', 'songs/6.mp3', 'Atif Aslam')"></i></button>
+                            <h2 class="song_name_style">Pehli Dafa</h2>
+                            <span class="artist_name_style">Atif Aslam</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/palpal.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/palpal.jpg', 'Pal Pal पाल पाल', 'songs/18.mp3', 'Afusic, Talwiinder & AliSoomroMusic')"></i></button>
+                            <h2 class="song_name_style">Pal Pal</h2>
+                            <span class="artist_name_style">Afusic, Talwiinder & AliSoomroMusic</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/tu_hi_hai_ashiqi.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/tu_hi_hai_ashiqi.jpg', 'Tu Hi Hai Aashiqui-Duet तू ही है आशिकी-डुएट', 'songs/5.mp3', 'Arijit Singh and Palak Muchha')"></i></button>
+                            <h2 class="song_name_style">Tu Hi Hai Aashiqui (Duet)</h2>
+                            <span class="artist_name_style">Arijit Singh and Palak Muchha</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/beqarar.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/beqarar.jpg', 'Beqarar Karke Hamen Yun Na Jaiye बेकरार करके हमें यूं न जाइए', 'songs/7.mp3', 'Hemant Kumar')"></i></button>
+                            <h2 class="song_name_style">Beqarar Karke Hamen Yun Na</h2>
+                            <span class="artist_name_style">Hemant Kumar</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/ashiqi2.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/ashiqi2.jpg', 'Sun Raha Hai Na Tu सुन रहा है ना तू', 'songs/19.mp3', 'Arijit Singh')"></i></button>
+                            <h2 class="song_name_style">Sun Raha Hai Na Tu</h2>
+                            <span class="artist_name_style">Arijit Singh</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/intou.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/intou.jpg', 'Into You ईंटो यु', 'songs/22.mp3', 'Hiten')"></i></button>
+                            <h2 class="song_name_style">Into You</h2>
+                            <span class="artist_name_style">Hiten</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/ishq_bulaava.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/ishq_bulaava.jpg', 'Ishq bulaava इश्क बुलावा', 'songs/11.mp3', 'Vishal & Shekhar')"></i></button>
+                            <h2 class="song_name_style">Ishq Bulaava</h2>
+                            <span class="artist_name_style">Vishal & Shekhar</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/kun_anta.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/kun_anta.jpg', 'Kun Anta كن أنت', 'songs/17.mp3', 'Humood AlKhudher')"></i></button>
+                            <h2 class="song_name_style">kun Anta</h2>
+                            <span class="artist_name_style">Humood AlKhudher</span>
+                        </div>
+                        <div class="song song_box">
+                            <img src="pics/mula_mere.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/mula_mere.jpg', 'Maula Mere Maula ماولا میرے ماولا', 'songs/16.mp3', 'Zesan Rahaman & Roop Kumar Rathod')"></i></button>
+                            <h2 class="song_name_style">Maula Mere Maula</h2>
+                            <span class="artist_name_style">Zesan Rahaman & Roop Kumar Rathod</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="artists" class="section_p">
+                    <h1 class="heading">Artist</h1>
+                    <div id="pa_container"  class="container">
+                        <div class="artist">
+                            <img src="pics/artists/talwiinder.webp" alt="">
+                            <h2>Talwiinder</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/arijit_singh.webp" alt="">
+                            <h2>Arijit Singh</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/atif_aslam.webp" alt="">
+                            <h2>Atif Aslam</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/pawan_singh.webp" alt="">
+                            <h2>Pawan Singh</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/adnam_sami.jpg" alt="">
+                            <h2>Adnam Sami</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/darshan_ravel.webp" alt="">
+                            <h2>Darshan Ravel</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/Rahat-Fateh-Ali-Khan.png" alt="">
+                            <h2>Rahat Fateh Ali Khan</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/kLalYadav.jpeg" alt="">
+                            <h2>Kesari Lal Yadav</h2>
+                            <span>Artist</span>
+                        </div>
+                        <div class="artist">
+                            <img src="pics/artists/guru-randhawa.webp" alt="">
+                            <h2>Guru Randhawa</h2>
+                            <span>Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="popular_albums">
+                    <h1 class="heading">Popular Albums</h1>
+                    <div class="container" id="album_container">
+                        <div class="album song_box">
+                            <img src="pics/main_hoon_sath_tere.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/main_hoon_sath_tere.jpg', 'Main Hoon Saath Tere - Shaadi Mein Zaroor Aana मैं हूँ साथ तेरे - शादी में जरूर आना', 'songs/23.mp3', 'Arijit Singh')"></i></button>
+                            <h2 class="song_name_style">Main Hoon Saath Tere - "Shaadi Mein Zaroor Aana"</h2>
+                            <span class="artist_name_style">Arijit Singh</span> 
+                        </div>
+                        <div class="album song_box">
+                            <img src="pics/z.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/z.jpg', 'Photo Zoom Zoom फोटो जूम जूम', 'songs/2.mp3', 'Neelkamal Singh')"></i></button>
+                            <h2 class="song_name_style">Photo Zoom Zoom</h2>
+                            <span class="artist_name_style">Neelkamal Singh</span> 
+                        </div>
+                        <div class="album song_box">
+                            <img src="pics/man_mera.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/man_mera.jpg', 'Mann Mera मन मेरा', 'songs/15.mp3', 'Gajendra Verma')"></i></button>
+                            <h2 class="song_name_style">Mann Mera</h2>
+                            <span class="artist_name_style">Gajendra Verma</span> 
+                        </div>
+                        <div class="album song_box">
+                            <img src="pics/md.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/md.jpg', 'Kiya Muhammad Ka Pyara Nahi Hoon क्या मुहम्मद का प्यारा नहीं हूँ', 'songs/13.mp3', 'Ali Shanawar & Ali Jee')"></i></button>
+                            <h2 class="song_name_style">Kiya Muhammad Ka Pyara Nahi Hoon</h2>
+                            <span class="artist_name_style">Ali Shanawar & Ali Jee</span> 
+                        </div>
+                        <div class="album song_box">
+                            <img src="pics/saiyaara.jpg" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/saiyaara.jpg', 'Saiyaara सैयाारा', 'songs/14.mp3', 'Faheem Abdullah, Arslan Nizami & Irshad Kamil')"></i></button>
+                            <h2 class="song_name_style">Saiyaara</h2>
+                            <span class="artist_name_style">Faheem Abdullah, Arslan Nizami & Irshad Kamil</span> 
+                        </div>
+                        <div class="album song_box">
+                            <img src="pics/kon_disa_mein.webp" alt="" class="pic_style">
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/kon_disa_mein.webp', 'Kon Disa Mein कौन सी दिशा में', 'songs/12.mp3', 'Varsha Singh Dhanoa Maddy Sharma')"></i></button>
+                            <h2 class="song_name_style">Kon Disa Mein</h2>
+                            <span class="artist_name_style">Varsha Singh Dhanoa Maddy Sharma</span> 
+                        </div>
+                    </div>
+                </div>
+                <div id="featured_charts">
+                    <h1 class="heading">Featured Charts</h1>
+                    <div class="container" id="f_conatiner">
+                        <div class="featured song_box">
+                            <img src="pics/f1.PNG" alt="" class="pic_style">
+                            <button class="arrow"><i class="bi bi-arrow-up-right-square-fill"></i></button>
+                            <!-- <i class="bi bi-arrow-through-heart"></i> -->
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill"></i></button>
+                            <p>Your weekly update of the most played tracks right now - Global.</p>
+                        </div>
+                        <div class="featured song_box">
+                            <img src="pics/f2.PNG" alt="" class="pic_style">
+                            <button class="arrow"><i class="bi bi-arrow-up-right-square-fill"></i></button>
+                            <!-- <i class="bi bi-arrow-through-heart"></i> -->
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill"></i></button>
+                            <p>Your weekly update of the most played tracks right now - India.</p>
+                        </div>
+                        <div class="featured song_box">
+                            <img src="pics/f3.PNG" alt="" class="pic_style">
+                            <button class="arrow"><i class="bi bi-arrow-up-right-square-fill"></i></button>
+                            <!-- <i class="bi bi-arrow-through-heart"></i> -->
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill"></i></button>
+                            <p>Your daily update of the most played tracks right now - Global.</p>
+                        </div>
+                        <div class="featured song_box">
+                            <img src="pics/f4.PNG" alt="" class="pic_style">
+                            <button class="arrow"><i class="bi bi-arrow-up-right-square-fill"></i></button>
+                            <!-- <i class="bi bi-arrow-through-heart"></i> -->
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill"></i></button>
+                            <p>Your daily update of the most played tracks right now - India.</p>
+                        </div>
+                        <div class="featured song_box">
+                            <div class="bg_pic_style">
+                                <div class="top">
+                                    <h5>Viral 50</h5>
+                                </div>
+                                <div class="bottom">
+                                    <span>Global</span>
+                                </div>
+                            </div>
+                            <button class="arrow"><i class="bi bi-arrow-up-right-square-fill"></i></button>
+                            <!-- <i class="bi bi-arrow-through-heart"></i> -->
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill"></i></button>
+                            <p>Your daily update of the most viral tracks right now - Global.</p>
+                        </div>
+                        <div class="featured song_box">
+                            <div class="bg_pic_style" id="bg_pic_style_2">
+                                <div class="top">
+                                    <h5>Viral 50</h5>
+                                </div>
+                                <div class="bottom">
+                                    <span>India</span>
+                                </div>
+                            </div>
+                            <button class="arrow"><i class="bi bi-arrow-up-right-square-fill"></i></button>
+                            <!-- <i class="bi bi-arrow-through-heart"></i> -->
+                            <button class="song_box_button"><i class="bi bi-play-circle-fill"></i></button>
+                            <p>Your daily update of the most viral tracks right now - India.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="SongPopup" class="popup-overlay">
+                    <div class="popup-box">
+                        <img src="pics/palpal.jpg" alt="">
+                        <div id="popup_details">
+                            <span id="closeBtn">&times;</span><br>
+                            <marquee loop="-1" scrollamount="5" id="popup_song_name">Pal Pal  पाल पाल</marquee><br>
+                            <button onclick="play_music('songs/18.mp3','pics/palpal.jpg', 'Pal Pal  पाल पाल', 'Talwiinder')" class="normal">Play Song</button>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div id="links_container">
+                        <ul>
+                            <li><strong>Company</strong></li>
+                            <li>About</li>
+                            <li>Jobs</li>
+                            <li>For the Record</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Communities</strong></li>
+                            <li>For Artists</li>
+                            <li>Developers</li>
+                            <li>Advertising</li>
+                            <li>Investors</li>
+                            <li>Vendors</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Useful links</strong></li>
+                            <li>Support</li>
+                            <li>Free Mobile App</li>
+                            <li>For the Record</li>
+                            <li>Popular by</li>
+                            <li>Country</li>
+                            <li>Import your music</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Musiq Plans</strong></li>
+                            <li>Premium Individual</li>
+                            <li>Premium Duo</li>
+                            <li>Premium Family</li>
+                            <li>Premium Student</li>
+                            <li>Musiq Free</li>
+                        </ul>
+                        <div id="icons">
+                            <li><strong>Click The Icons For My <br> Socialmedia Account</strong></li>
+                            <li><a href="https://www.instagram.com/_zeeshan_inamdar_/"><i class="bi bi-instagram"></i></a></li>
+                            <li><a href="https://github.com/mr-inamdar"><i class="bi bi-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/zeeshan-inamdar-349b95377/"><i class="bi bi-linkedin"></i></a></li>
+                        </div>
+                    </div>
+                    <h3>© 2025 Musiq AB</h3>
+                </footer>
+            </div>
+        </div>
+        <div id="stetus_bar">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="pics/palpal.jpg" alt="" id="poster_master_play">
+            <h5 id="title">
+                <marquee loop="-1" scrollamount="5">Pal Pal  पाल पाल</marquee>
+                <div class="subtitle">Talwiinder</div>
+            </h5>
+            <div class="icon">
+                <i class="bi shuffle bi-file-earmark-music">next</i>
+                <i class="bi bi-skip-start-circle" onclick="play_previous_song()"></i>
+                <i class="bi bi-play-circle" id="play_icon" onclick="togglePlayPause()"></i>
+                <i class="bi bi-skip-end-circle" onclick="call_play_next_song()"></i>
+                <a href="songs/18.mp3" download id="dowload_music"><i class="bi bi-arrow-down-circle"></i></a>
+            </div>
+            <span id="current_time">0:00</span>
+            <input type="range" id="seek" min="0" max="100" value="0">
+            <span id="current_end">0:30</span>
+            <div class="vol">
+                <i class="bi bi-volume-up-fill" id="vol_icon"></i>
+                <input type="range" min="0" max="100" id="vol_input" value="100">
+            </div>
+        </div>
+        <div id="mobile_footer">
+            <div id="home" class="feature" onclick="displa_home_page()">
+                <i class="bi bi-house-fill" id="home"></i>
+                <span>Home</span>
+            </div>
+            <div id="search" class="feature" onclick="display_search_page()">
+                <i class="bi bi-search"></i>
+                <span>Search</span>
+            </div>
+            <div id="ur_library" class="feature" onclick="display_playlist_page()">
+                <i class="bi bi-collection-play-fill"></i>
+                <span>Ur Library</span>
+            </div>
+            <div id="premium" class="feature">
+                <i class="bi bi-file-earmark-music-fill"></i>
+                <span>Premium</span>
+            </div>
+            <div id="creat" class="feature">
+                <i class="bi bi-plus-circle-fill"></i>
+                <span>Creat</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let nv = document.getElementById("nav_bar");
+        function close_nav_bar() {
+            nv.style.right = "-300px";
+        }
+        function disply_nav_bar() {
+            nv.style.right = "0px";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

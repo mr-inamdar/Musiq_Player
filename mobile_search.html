@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musiq</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="se-main">
+        <header>
+            <h1>Search</h1>
+            <div class="search-mobile">
+                <i class="bi bi-search"></i>
+                <input type="text" id="mo-input">
+                <div class="search_results">
+                    <!-- <div class="card" onclick="activate_song_popup('pics/kun_anta.jpg', 'Kun Anta كن أنت', 'songs/17.mp3', 'Humood AlKhudher')">
+                        <img src="pics/1.jpeg" alt="">
+                        <div class="content">
+                            Khayaal
+                            <div class="subtitel">Talwiinder</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <div id="mo-sujession">
+            <div id="type">
+                <h1>Start browsing</h1>
+                <div id="ctype">
+                    <div class="stype">
+                        <h1>Music</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>Prodcasts</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>Live Events</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>Home of I-Pop</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>Made For U</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>New Releases</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>Rain & Monsoon</h1>
+                    </div>
+                    <div class="stype">
+                        <h1>Hindi</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="playsong">
+                <h1>Picked for u</h1>
+                <div id="psong">
+                    <div class="cpsong">
+                        <img src="pics/palpal.jpg" alt="">
+                        <div class="details">
+                            <div id="name">
+                                <span>Playlist</span><br>
+                                <marquee behavior="" direction="" loop="-1" scrollamount="5">Pal Pal  पाल पाल</marquee><br>
+                                <i class="bi bi-plus-circle-fill"></i>
+                            </div>
+                            <div id="icon">
+                                <i class="bi bi-three-dots-vertical"></i>
+                                <i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/palpal.jpg', 'Pal Pal पाल पाल', 'songs/18.mp3', 'Afusic, Talwiinder & AliSoomroMusic')"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpsong">
+                        <img src="pics/1.jpeg" alt="">
+                        <div class="details">
+                            <div id="name">
+                                <span>Playlist</span><br>
+                                <marquee behavior="" direction="" loop="-1" scrollamount="5">Rang Jo Lagyo-Ramaiya Vastavaiya रंग जो लाग्यो - रमैया वस्तावैया رنگ جو لگیو-رمائیا وسٹاویہ</marquee><br>
+                                <i class="bi bi-plus-circle-fill"></i>
+                            </div>
+                            <div id="icon">
+                                <i class="bi bi-three-dots-vertical"></i>
+                                <i class="bi bi-play-circle-fill" onclick="activate_song_popup('pics/rang.jpg', 'Rang Jo Lagyo-Ramaiya Vastavaiya रंग जो लाग्यो - रमैया वस्तावैया رنگ جو لگیو-رمائیا وسٹاویہ', 'songs/21.mp3', 'Atif Aslam & Shreya Ghoshal')"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="SongPopup" class="popup-overlay">
+            <div class="popup-box">
+                <img src="pics/palpal.jpg" alt="">
+                <div id="popup_details">
+                    <span id="closeBtn">&times;</span><br>
+                    <marquee loop="-1" scrollamount="5" id="popup_song_name">Pal Pal  पाल पाल</marquee><br>
+                    <button onclick="play_music('songs/18.mp3','pics/palpal.jpg', 'Pal Pal  पाल पाल', 'Talwiinder')" class="normal">Play Song</button>
+                </div>
+            </div>
+        </div>
+        <div id="stetus_bar">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="pics/palpal.jpg" alt="" id="poster_master_play">
+            <h5 id="title">
+                <marquee loop="-1" scrollamount="5">Pal Pal  पाल पाल</marquee>
+                <div class="subtitle">Talwiinder</div>
+            </h5>
+            <div class="icon">
+                <i class="bi shuffle bi-file-earmark-music">next</i>
+                <i class="bi bi-skip-start-circle" onclick="play_previous_song()"></i>
+                <i class="bi bi-play-circle" id="play_icon" onclick="togglePlayPause()"></i>
+                <i class="bi bi-skip-end-circle" onclick="call_play_next_song()"></i>
+                <a href="songs/18.mp3" download id="dowload_music"><i class="bi bi-arrow-down-circle"></i></a>
+            </div>
+            <span id="current_time">0:00</span>
+            <input type="range" id="seek" min="0" max="100" value="0">
+            <span id="current_end">0:30</span>
+            <div class="vol">
+                <i class="bi bi-volume-up-fill" id="vol_icon"></i>
+                <input type="range" min="0" max="100" id="vol_input" value="100">
+            </div>
+        </div>
+        <div id="mobile_footer">
+            <div id="home" class="feature" onclick="displa_home_page()">
+                <i class="bi bi-house-fill" id="home"></i>
+                <span>Home</span>
+            </div>
+            <div id="search" class="feature" onclick="display_search_page()">
+                <i class="bi bi-search"></i>
+                <span>Search</span>
+            </div>
+            <div id="ur_library" class="feature" onclick="display_playlist_page()">
+                <i class="bi bi-collection-play-fill"></i>
+                <span>Ur Library</span>
+            </div>
+            <div id="premium" class="feature">
+                <i class="bi bi-file-earmark-music-fill"></i>
+                <span>Premium</span>
+            </div>
+            <div id="creat" class="feature">
+                <i class="bi bi-plus-circle-fill"></i>
+                <span>Creat</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
