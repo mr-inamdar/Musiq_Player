@@ -34,8 +34,6 @@ fetch('detail.json')
     });
 
 let search_input = document.querySelector(".search #pc-search") || document.querySelector(".search-mobile #mo-input");
-// let search_input = document.querySelector('.search #pc-search');
-// let mobile_search_input = document.querySelector('.search-mobile #mo-input');
 
 search_input.addEventListener("keyup", () => {
     let input_value = search_input.value.trim().toLowerCase(); // lower-case for English
@@ -96,42 +94,25 @@ function play_next_song() {
         playlist_play_icon.classList.remove("bi-play-circle-fill");
         playlist_play_icon.classList.add("bi-pause-circle-fill");
         play_audio(playlist_song[playlist_indexing].cover, playlist_song[playlist_indexing].name, playlist_song[playlist_indexing].artist);
-        // if (playlist_indexing >= playlist_song.length) {
-        //     playlist_indexing = 0;
-        // } else {
-        //     playlist_indexing++;
-        // }
     } else{
         audio_elemant.src =  all_songs[random_index].song;
         dowload_music.setAttribute(`download`, all_songs[random_index].name);
         dowload_music.href = all_songs[random_index].song;
         play_audio(all_songs[random_index].cover, all_songs[random_index].name, all_songs[random_index].artist);
-        // if (random_index >= all_songs.length) {
-        //     random_index = 0;
-        // } else {
-        //     random_index++;
-        // }
     }
 }
-// let canExicute = false;
 function togglePlayPause() {
-    // if (!canExicute) {
-    //     canExicute = true;
-        if (play_icon.classList.contains("bi-play-circle")) {
-            // play_next_song();
-            audio_elemant.play();
-        } else {
-            play_icon.classList.remove("bi-pause-circle");
-            play_icon.classList.add("bi-play-circle");
-            wave.classList.remove("active");
-            makeAllBackground();
-            makeAllPlays();
-            audio_elemant.pause();
-        }  
-    // } 
-    // setTimeout(() => {
-    //     canExicute = false;
-    // }, 2000);
+    if (play_icon.classList.contains("bi-play-circle")) {
+        // play_next_song();
+        audio_elemant.play();
+    } else {
+        play_icon.classList.remove("bi-pause-circle");
+        play_icon.classList.add("bi-play-circle");
+        wave.classList.remove("active");
+        makeAllBackground();
+        makeAllPlays();
+        audio_elemant.pause();
+    }  
 }
 const call_play_next_song = () => {
     if (random_index >= all_songs.length) {
@@ -170,9 +151,6 @@ audio_elemant.addEventListener('timeupdate', () => {
     current_time.innerText = `${mint2}:${sec2}`;
 
     progress = parseInt((audio_elemant.currentTime/audio_elemant.duration) * 100);
-    // if(progress == 100){
-    //     play_next_song();
-    // }
     progres_bar.value = progress;
 });
 
@@ -231,36 +209,21 @@ Array.from(document.getElementsByClassName("playListPlay")).forEach((e)=>{
         index = el.target.id;
         playlist_indexing = index-1;
         isPlaylist_song = true;
-        // play_icon.click();
-        // let arr = songs.filter((ele) =>{
-        //     return ele.id == index;
-        // })
-        // arr.forEach(ele=>{
-        //     let { songName, poster} = ele;
-        //    title.innerHTML = songName;
-        //    poster_master_play.src = poster;
-        // })
-        // if (!canExicute) {
-        //     canExicute = true;
-            if (el.target.classList.contains('bi-pause-circle-fill')) {
-                el.target.classList.remove("bi-pause-circle-fill");
-                el.target.classList.add("bi-play-circle-fill");
-                togglePlayPause();
-            } else {
-                makeAllPlays();
-                makeAllBackground();
-                Array.from(document.getElementsByClassName("song_item"))[index-1].style.background ='rgba(58, 58, 91, 0.5)';
-                el.target.classList.remove("bi-play-circle-fill");
-                el.target.classList.add("bi-pause-circle-fill");
-                audio_elemant.src = playlist_song[index-1].song;
-                dowload_music.setAttribute(`download`, playlist_song[index-1].name);
-                dowload_music.href = playlist_song[index-1].song;
-                play_audio(playlist_song[index-1].cover, playlist_song[index-1].name, playlist_song[index-1].artist);
-            } 
-        // }
-        // setTimeout(() => {
-        //     canExicute = false;
-        // }, 2000);  
+        if (el.target.classList.contains('bi-pause-circle-fill')) {
+            el.target.classList.remove("bi-pause-circle-fill");
+            el.target.classList.add("bi-play-circle-fill");
+            togglePlayPause();
+        } else {
+            makeAllPlays();
+            makeAllBackground();
+            Array.from(document.getElementsByClassName("song_item"))[index-1].style.background ='rgba(58, 58, 91, 0.5)';
+            el.target.classList.remove("bi-play-circle-fill");
+            el.target.classList.add("bi-pause-circle-fill");
+            audio_elemant.src = playlist_song[index-1].song;
+            dowload_music.setAttribute(`download`, playlist_song[index-1].name);
+            dowload_music.href = playlist_song[index-1].song;
+            play_audio(playlist_song[index-1].cover, playlist_song[index-1].name, playlist_song[index-1].artist);
+        }  
     })
 })
 
@@ -375,7 +338,6 @@ shuffle.addEventListener('click', ()=>{
 });
 
 const next_musiq = ()=>{
-    // index++;
     if (isPlaylist_song) {
         if (playlist_indexing >= playlist_song.length) {
             playlist_indexing = 1;
@@ -403,16 +365,6 @@ const next_musiq = ()=>{
             random_index++;
         }
     }
-    
-    // let arr = songs.filter((ele) =>{
-    //     return ele.id == index;
-    // })
-    // arr.forEach(ele=>{
-    //     let { songName, poster} = ele;
-    //    title.innerHTML = songName;
-    //    poster_master_play.src = poster;
-    // })
-   
 }
 const repeat_musiq = ()=>{
     //index;
@@ -437,12 +389,6 @@ const repeat_musiq = ()=>{
     }
 }
 const random_musiq = ()=>{
-    // index++;
-    // if (index == songs.length) {
-    //     index = 1;
-    // } else {
-    //     index = Math.floor((Math.random() * songs.length) + 1);
-    // }
     if (isPlaylist_song) {
         if (playlist_indexing >= playlist_song.length) {
             playlist_indexing = 1;
@@ -484,4 +430,5 @@ audio_elemant.addEventListener('ended', ()=>{
             random_musiq();
             break;
     }
+
 });
