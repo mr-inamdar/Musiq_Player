@@ -18,7 +18,8 @@
 html,body{
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .normal{
     background-color: rgb(77, 77, 255);
@@ -1201,3 +1202,4 @@ header .search .search_results .card .subtitel,
     }
 
 }
+
