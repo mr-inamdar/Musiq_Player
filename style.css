@@ -414,78 +414,6 @@ header .search .search_results .card .subtitel,
 #sudjesion::-webkit-scrollbar{
     display: none;
 }
-/* #sudjesion #treanding_song{
-    padding: 10px 0px;
-}
-#sudjesion #treanding_song #song_container{
-    overflow-x: auto;
-    padding: 10px 30px;
-    display: flex;
-}
-#sudjesion #treanding_song #song_container::-webkit-scrollbar{
-    display: none;
-}
-#sudjesion #treanding_song h1,
-#sudjesion #artists h1{
-    font-size: 1rem;
-    padding-left: 30px;
-} */
-#sudjesion #treanding_song #song_container .song{
-    height: 200px;
-    width: 170px;
-}
-/* #sudjesion #treanding_song #song_container .song:hover{
-    background-color: #2c2d32;
-} */
-/* #sudjesion #treanding_song #song_container .song button{
-    opacity: 0;
-    font-size: 2rem;
-    z-index: 21;
-    position: absolute;
-    border: none;
-    outline: none;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: white;
-    top: 120px;
-    right: 20px;
-    transition: .5s linear;
-} */
-/* #sudjesion #treanding_song #song_container .song:hover button{
-    opacity: 1;
-    top: 100px;
-}
-#sudjesion #treanding_song #song_container .song button:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-} */
-/* #sudjesion #treanding_song #song_container .song button i{
-    color: rgb(45, 180, 45);
-} */
-/* #sudjesion #treanding_song #song_container .song img{
-    height: 75%;
-    width: 100%;
-    margin-bottom: 5px;
-    border-radius: 7px;
-}
-#sudjesion #treanding_song #song_container .song h2{
-    font-size: 1rem;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-#sudjesion #treanding_song #song_container .song span{
-    font-size: .8rem;
-    font-weight: 200;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-} */
-/* #sudjesion #artists #pa_container{
-    overflow-x: auto;
-    padding: ;
-} */
 #sudjesion #artists #pa_container .artist{
     height: 180px;
     width: 130px;
@@ -604,15 +532,8 @@ header .search .search_results .card .subtitel,
 #sudjesion footer #links_container #icons li i{
     font-size: 1.5rem;
 }
-/* #sudjesion footer #links_container #icons{
-    /* display: flex; */
-    /* align-items: center; */
-    /* font-size: 1.5rem; 
-} */
 #sudjesion footer #links_container #icons li{
     list-style: none;
-    /* margin-right: 7px; 
-    /* margin-bottom: 5px; */
     margin-left: 10px;
     margin-bottom: 10px;
 } 
@@ -1145,4 +1066,5 @@ header .search .search_results .card .subtitel,
     .popup-box{
         width: 80vw;
     }
+
 }
