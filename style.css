@@ -1099,7 +1099,11 @@ header .search .search_results .card .subtitel,
         align-items: center;
         justify-content: space-between;
         padding: 10px 15px;
-        position: sticky;
+        position: fixed;
+    }
+    #fake-mobile_footer{
+       height: 8%;
+        width: 100%; 
     }
     #mobile_footer i{
         color: #ccc;
@@ -1174,6 +1178,9 @@ header .search .search_results .card .subtitel,
     }
 }
 @media (max-width:399px){
+    #stetus_bar {
+        padding: 0;
+    }
     #stetus_bar .vol input{
         position: absolute;
         transform: rotate(270deg);
@@ -1192,4 +1199,5 @@ header .search .search_results .card .subtitel,
         width: 40%;
         height: 5px;
     }
+
 }
