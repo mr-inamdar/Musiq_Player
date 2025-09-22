@@ -833,7 +833,7 @@ header .search .search_results .card .subtitel,
 }
 #playsong #psong .cpsong img{
     height: 150px;
-    width: 50%;
+    width: 150px;
     margin-right: 5px;
     border-radius: 5px;
 }
@@ -1194,6 +1194,7 @@ header .search .search_results .card .subtitel,
     }
 
 }
+
 
 
 
