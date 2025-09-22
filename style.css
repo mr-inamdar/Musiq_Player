@@ -1058,15 +1058,15 @@ header .search .search_results .card .subtitel,
         flex: 1;
     }
     #main header{
-        height: 12%;
+        height: 12vh;
         width: 100%;
     }
     #song{
-        height: 70%;
+        height: 70vh;
         width: 100%;
     }
     #stetus_bar{
-       height: 10%;
+       height: 10vh;
         width: 100%; 
     }
     #main header .search{
@@ -1093,7 +1093,7 @@ header .search .search_results .card .subtitel,
         width: 100%;
     }
     #mobile_footer{
-        height: 8%;
+        height: 8vh;
         width: 100%;
         background: none;
         display: flex;
@@ -1202,4 +1202,5 @@ header .search .search_results .card .subtitel,
     }
 
 }
+
 
