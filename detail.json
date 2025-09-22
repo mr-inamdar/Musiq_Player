@@ -13,7 +13,7 @@
     {"name": "Into You ईंटो यु", "cover": "pics/intou.jpg", "song": "songs/22.mp3", "artist": "Hiten"},
     {"name": "Gulabi Aankhen गुलाबी आँखें", "cover": "pics/tu_hi_hai_ashiqi.jpg", "song": "songs/10.mp3", "artist": "Sanam"},
     {"name": "Tu Hi Hai Aashiqui-Duet तू ही है आशिकी-डुएट", "cover": "pics/tu_hi_hai_ashiqi.jpg" , "song": "songs/5.mp3", "artist": "Arijit Singh and Palak Muchha"},
-    {"name": "Bhar Do Jholi Meri Ya Mohammad भर दे झोली या मेरी मोहम्मद بھردو جھولی میری یا محمد", "cover": "pics/palpal.jpg", "song": "songs/3.mp3", "artist": "ADNAN SAMI, PRITAM and KAUSAR MUNIR"},
+    {"name": "Bhar Do Jholi Meri Ya Mohammad भर दे झोली या मेरी मोहम्मद بھردو جھولی میری یا محمد", "cover": "pics/beqarar.jpg", "song": "songs/3.mp3", "artist": "ADNAN SAMI, PRITAM and KAUSAR MUNIR"},
     {"name": "Pehli Dafa پہلی دفعہ", "cover": "pics/phlidafa.jpg", "song": "songs/6.mp3", "artist": "Atif Aslam"},
     {"name": "Dagabaaz Re दगाबाज़ रे", "cover": "pics/dagabaaz.jpg", "song": "songs/8.mp3", "artist": "Rahat Fateh Ali Khan & Shreya Gh"},
     {"name": "Mann Mera मन मेरा", "cover": "pics/man_mera.jpg", "song": "songs/15.mp3", "artist": "Gajendra Verma"},
@@ -24,4 +24,5 @@
     {"name": "You यू یو", "cover": "pics/kon_disa_mein.webp", "song": "songs/25.mp3", "artist": "THEMXXNLIGHT & Talwiinder"},
     {"name": "Kya - 'Crook' क्या - 'क्रूक'", "cover": "pics/kay.jpg", "song": "songs/24.mp3", "artist": "Pritam & Neeraj Shridhar"},
     {"name": "Main Hoon Saath Tere - 'Shaadi Mein Zaroor Aana' मैं हूँ साथ तेरे - 'शादी में जरूर आना'", "cover": "pics/main_hoon_sath_tere.jpg", "song": "songs/23.mp3", "artist": "Arijit Singh"}
+
 ]
