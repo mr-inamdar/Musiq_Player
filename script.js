@@ -115,16 +115,34 @@ function togglePlayPause() {
     }  
 }
 const call_play_next_song = () => {
-    if (random_index >= all_songs.length) {
-        random_index = 0;
+    if(isPlaylist_song){
+        if (playlist_indexing >= playlist_song.length) {
+            playlist_indexing = 0;
+        } else{
+            playlist_indexing++;
+        }
+    } else{
+        if (random_index >= all_songs.length) {
+            random_index = 0;
+        } else{
+            random_index++;
+        }
     }
     play_next_song();
 }
 const play_previous_song = () =>{
-    if (random_index <= 0) {
-        random_index = all_songs.length -1;
-    }else{
-        random_index-=2;
+    if(isPlaylist_song){
+        if (playlist_indexing <= 0) {
+            playlist_indexing = playlist_song.length -1;
+        }else{
+            playlist_indexing--;
+        }
+    } else{
+        if (random_index <= 0) {
+            random_index = all_songs.length -1;
+        }else{
+            random_index-=2;
+        }
     }
     play_next_song();
 }
@@ -432,3 +450,4 @@ audio_elemant.addEventListener('ended', ()=>{
     }
 
 });
+
