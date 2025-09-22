@@ -959,7 +959,7 @@ header .search .search_results .card .subtitel,
         transition-duration: .2s;
     }
 }
-@media (max-width:499px) {
+@media (max-width:555px) {
     #main{
         background-color: #0e242e;
     }
