@@ -1052,9 +1052,6 @@ header .search .search_results .card .subtitel,
 }
 @media (max-width:499px) {
     #main{
-        height: 100vh;
-        width: 100vw;
-        background-color: #0e242e;
         flex: 1;
     }
     #main header{
@@ -1095,7 +1092,7 @@ header .search .search_results .card .subtitel,
     #mobile_footer{
         height: 8vh;
         width: 100%;
-        background: none;
+        background: #0e242e;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1197,6 +1194,7 @@ header .search .search_results .card .subtitel,
     }
 
 }
+
 
 
 
