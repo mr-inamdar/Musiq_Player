@@ -897,7 +897,9 @@ header .search .search_results .card .subtitel,
         left: 300px;
     }
     #stetus_bar #seek,
-    #stetus_bar #current_time{
+    #stetus_bar #current_time,
+    #current_end,
+    #stetus_bar .vol input{
         margin-bottom: 20px;
     } 
     #main header {
@@ -971,6 +973,7 @@ header .search .search_results .card .subtitel,
 @media (max-width:499px) {
     #main{
         background-color: #0e242e;
+        flex: 1;   
     }
     #main header .search{
         display: none;
@@ -1006,6 +1009,7 @@ header .search .search_results .card .subtitel,
         align-items: center;
         justify-content: space-between;
         padding: 10px 15px;
+        position: sticky;
     }
     #mobile_footer i{
         color: #ccc;
@@ -1029,15 +1033,20 @@ header .search .search_results .card .subtitel,
     }
     #stetus_bar .vol input {
         position: absolute;
-        opacity: 0;
         top: 20px;
         right: 10px;
-        width: 70px;
+        width: 50px;
         height: 5px;
-        transition: .5s linear;
     }
-    #stetus_bar .vol i:hover input{
-        opacity: 1;
+    #stetus_bar span{
+        margin-left: 5px;
+    }
+    #stetus_bar .vol i{
+        position: absolute;
+        right: 30px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        margin-top: 10px;
     }
     #main header #home {
         display: none;
@@ -1045,10 +1054,11 @@ header .search .search_results .card .subtitel,
     #stetus_bar .icon {
         position: absolute;
         bottom: 20px;
-        left: 155px;
+        left: 137px;
     }
     #stetus_bar #seek {
-        width: 40%;
+        width: 50%;
+        height: 5px;
     }
     #main header img {
         height: 55px;
@@ -1068,3 +1078,4 @@ header .search .search_results .card .subtitel,
     }
 
 }
+
